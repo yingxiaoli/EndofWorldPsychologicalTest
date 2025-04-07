@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>末日人格测试</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fff5e6;
+        }
+
+        input[type="radio"] {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #ccc;
+            border-radius: 50%;
+            outline: none;
+            margin-right: 5px;
+            position: relative;
+        }
+
+        input[type="radio"]:checked::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background-color: #3b82f6;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        button {
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+        
+    /*中立-博爱*/
+    .neutrality_univeralLove {
+      width: 500px;
+      height: 500px;
+      margin: 0 auto;
+      background-size: cover;
+      background-image: url('https://upload-images.jianshu.io/upload_images/2199607-decbdacf97f16bf3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240');
+}
+    /* 中立-竞争 */
+    .neutrality_competition{
+      width: 500px;
+      height: 500px;
+      margin: 0 auto;
+      background-size: cover;
+      background-image: url('https://upload-images.jianshu.io/upload_images/2199607-52ae74901962303a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240');
+    }
+    
+    /* 自由-竞争 */
+    .freedom_competition{
+      width: 500px;
+      height: 500px;
+      margin: 0 auto;
+      background-size: cover;
+      background-image: url('https://upload-images.jianshu.io/upload_images/2199607-419e6fcb00fecf69.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240');
+    }
+    
+    /* 自由-博爱 */
+    .freedom_univeralLove{
+      width: 500px;
+      height: 500px;
+      margin: 0 auto;
+      background-size: cover;
+      background-image: url('https://upload-images.jianshu.io/upload_images/2199607-7d394b26133f9ecf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240');
+    }
+    </style>
+</head>
+
+<body class="p-8">
+    <div class="max-w-3xl mx-auto bg-white p-8 rounded shadow-md">
+        <h1 class="text-3xl font-bold mb-6 text-center">末日人格测试</h1>
+        <p class="mb-6 text-center">一觉醒来，你发现自己穿越到了一个丧尸横行的世界，这时：</p>
+        <form id="testForm">
+            <div class="mb-6">
+                <h2 class="text-xl font-bold mb-2">生存基础篇</h2>
+                <p class="mb-2">1、发现唯一医疗箱的分配权在你手中</p>
+                <label class="block mb-1"><input type="radio" name="q1" value="有序·博爱"> 按伤情严重程度排序救治</label>
+                <label class="block mb-1"><input type="radio" name="q1" value="有序·竞争"> 优先治疗有战斗能力者</label>
+                <label class="block mb-1"><input type="radio" name="q1" value="自由·竞争"> 藏起药品留给自己</label>
+                <label class="block mb-1"><input type="radio" name="q1" value="自由·博爱"> 冒险外出寻找更多药品</label>
+            </div>
+            <div class="mb-6">
+                <p class="mb-2">2、避难所大门被尸群撞击时</p>
+                <label class="block mb-1"><input type="radio" name="q2" value="有序·博爱"> 按《防御手册》组织梯队抵抗</label>
+                <label class="block mb-1"><input type="radio" name="q2" value="有序·竞争"> 派反对者去吸引尸群注意</label>
+                <label class="block mb-1"><input type="radio" name="q2" value="自由·竞争"> 炸毁通道独自逃生</label>
+                <label class="block mb-1"><input type="radio" name="q2" value="自由·博爱"> 开门接纳逃亡者共同防御</label>
+            </div>
+            <div class="mb-6">
+                <p class="mb-2">3、找到记载抗体的实验笔记</p>
+                <label class="block mb-1"><input type="radio" name="q3" value="有序·博爱"> 建立共享数据库供研究者下载</label>
+                <label class="block mb-1"><input type="radio" name="q3" value="有序·竞争"> 申请专利控制疫苗生产权</label>
+                <label class="block mb-1"><input type="radio" name="q3" value="自由·竞争"> 黑市拍卖给出价最高军阀</label>
+                <label class="block mb-1"><input type="radio" name="q3" value="自由·博爱"> 刻在废墟墙壁上任人拓印</label>
+            </div>
+            <div class="mb-6">
+                <p class="mb-2">4、唯一净水器出现故障</p>
+                <label class="block mb-1"><input type="radio" name="q4" value="有序·博爱"> 组织技术团队公开维修</label>
+                <label class="block mb-1"><input type="radio" name="q4" value="有序·竞争"> 谎称报废并私藏净水</label>
+                <label class="block mb-1"><input type="radio" name="q4" value="自由·竞争"> 垄断维修技能赚钱</label>
+                <label class="block mb-1"><input type="radio" name="q4" value="自由·博爱"> 教孩童收集露水替代</label>
+            </div>
+            <div class="mb-6">
+                <h2 class="text-xl font-bold mb-2">道德困境篇</h2>
+                <p class="mb-2">5、孕妇被咬伤但胎儿有心跳</p>
+                <label class="block mb-1"><input type="radio" name="q5" value="有序·博爱"> 按医疗伦理委员会投票处置</label>
+                <label class="block mb-1"><input type="radio" name="q5" value="有序·竞争"> 剖腹取胎培养为实验体</label>
+                <label class="block mb-1"><input type="radio" name="q5" value="自由·竞争"> 卖给地下基因实验室</label>
+                <label class="block mb-1"><input type="radio" name="q5" value="自由·博爱"> 注射抑制剂尝试共生实验</label>
+            </div>
+            <div class="mb-6">
+                <p class="mb-2">6、同伴偷藏食物导致团队断粮</p>
+                <label class="block mb-1"><input type="radio" name="q6" value="有序·博爱"> 召开公审会给予改过机会</label>
+                <label class="block mb-1"><input type="radio" name="q6" value="有序·竞争"> 罚其执行高危侦查任务</label>
+                <label class="block mb-1"><input type="radio" name="q6" value="自由·竞争"> 夜间偷走对方所有物资</label>
+                <label class="block mb-1"><input type="radio" name="q6" value="自由·博爱"> 分享自己私藏应急粮</label>
+            </div>
+            <div class="mb-6">
+                <p class="mb-2">7、发现可控制丧尸的声波装置</p>
+                <label class="block mb-1"><input type="radio" name="q7" value="有序·博爱"> 制定《异种共处公约》</label>
+                <label class="block mb-1"><input type="radio" name="q7" value="有序·竞争"> 训练尸群消灭竞争对手</label>
+                <label class="block mb-1"><input type="radio" name="q7" value="自由·竞争"> 制造混乱夺取领导权</label>
+                <label class="block mb-1"><input type="radio" name="q7" value="自由·博爱"> 拆解零件改装医疗设备</label>
+            </div>
+            <div class="mb-6">
+                <p class="mb-2">8、婴儿被感染但未变异</p>
+                <label class="block mb-1"><input type="radio" name="q8" value="有序·博爱"> 送入无菌舱等待专家</label>
+                <label class="block mb-1"><input type="radio" name="q8" value="有序·竞争"> 培养成生物武器原型</label>
+                <label class="block mb-1"><input type="radio" name="q8" value="自由·竞争"> 与军阀交换重型武器</label>
+                <label class="block mb-1"><input type="radio" name="q8" value="自由·博爱"> 用自身血液尝试净化</label>
+            </div>
+            <div class="mb-6">
+                <h2 class="text-xl font-bold mb-2">权力博弈篇</h2>
+                <p class="mb-2">9、避难所选举新领袖</p>
+                <label class="block mb-1"><input type="radio" name="q9" value="有序·博爱"> 采用旧世界民主投票制</label>
+                <label class="block mb-1"><input type="radio" name="q9" value="有序·竞争"> 修改规则确保自己连任</label>
+                <label class="block mb-1"><input type="radio" name="q9" value="自由·竞争"> 散布谣言抹黑对手</label>
+                <label class="block mb-1"><input type="radio" name="q9" value="自由·博爱"> 拒绝参选专注技术研发</label>
+            </div>
+            <div class="mb-6">
+                <p class="mb-2">10、遭遇其他幸存者团队威胁</p>
+                <label class="block mb-1"><input type="radio" name="q10" value="有序·博爱"> 提议建立物资交换联盟</label>
+                <label class="block mb-1"><input type="radio" name="q10" value="有序·竞争"> 假意合作后发动突袭</label>
+                <label class="block mb-1"><input type="radio" name="q10" value="自由·竞争"> 释放尸群冲击对方基地</label>
+                <label class="block mb-1"><input type="radio" name="q10" value="自由·博爱"> 赠送地图引导其远离</label>
+            </div>
+            <div class="mb-6">
+                <p class="mb-2">11、获得能监控全城的无人机</p>
+                <label class="block mb-1"><input type="radio" name="q11" value="有序·博爱"> 公开实时画面供集体决策</label>
+                <label class="block mb-1"><input type="radio" name="q11" value="有序·竞争"> 要挟掌握隐私者效忠</label>
+                <label class="block mb-1"><input type="radio" name="q11" value="自由·竞争"> 伪造尸群警报制造恐慌</label>
+                <label class="block mb-1"><input type="radio" name="q11" value="自由·博爱"> 改装成药品空投装置</label>
+            </div>
+            <div class="mb-6">
+                <p class="mb-2">12、发现同伴是卧底间谍</p>
+                <label class="block mb-1"><input type="radio" name="q12" value="有序·博爱"> 召开听证会查明真相</label>
+                <label class="block mb-1"><input type="radio" name="q12" value="有序·竞争"> 策反其为双面间谍</label>
+                <label class="block mb-1"><input type="radio" name="q12" value="自由·竞争"> 当众处决以儆效尤</label>
+                <label class="block mb-1"><input type="radio" name="q12" value="自由·博爱"> 帮助其逃离原有组织</label>
+            </div>
+            <div class="mb-6">
+                <h2 class="text-xl font-bold mb-2">科技伦理篇</h2>
+                <p class="mb-2">13、抗体研究者要求活体实验</p>
+                <label class="block mb-1"><input type="radio" name="q13" value="有序·博爱"> 招募志愿者并签协议</label>
+                <label class="block mb-1"><input type="radio" name="q13" value="有序·竞争"> 秘密使用囚犯做试验</label>
+                <label class="block mb-1"><input type="radio" name="q13" value="自由·竞争"> 绑架敌对阵营成员</label>
+                <label class="block mb-1"><input type="radio" name="q13" value="自由·博爱"> 在自己身上进行注射</label>
+            </div>
+            <div class="mb-6">
+                <p class="mb-2">14、时空穿梭机即将耗尽能量</p>
+                <label class="block mb-1"><input type="radio" name="q14" value="有序·博爱"> 优先送回农业专家</label>
+                <label class="block mb-1"><input type="radio" name="q14" value="有序·竞争"> 确保自己返回旧时代</label>
+                <label class="block mb-1"><input type="radio" name="q14" value="自由·竞争"> 劫持设备穿越成帝王</label>
+                <label class="block mb-1"><input type="radio" name="q14" value="自由·博爱"> 随机传送五名儿童</label>
+            </div>
+            <div class="mb-6">
+                <p class="mb-2">15、濒死时发现意识上传技术</p>
+                <label class="block mb-1"><input type="radio" name="q15" value="有序·博爱"> 开放云端让全员意识永生</label>
+                <label class="block mb-1"><input type="radio" name="q15" value="有序·竞争"> 制造数字奴工系统</label>
+                <label class="block mb-1"><input type="radio" name="q15" value="自由·竞争"> 独占服务器成为AI之神</label>
+                <label class="block mb-1"><input type="radio" name="q15" value="自由·博爱"> 摧毁设备守护人类本质</label>
+            </div>
+            <div class="mb-6">
+                <p class="mb-2">16、获得基因编辑工具箱</p>
+                <label class="block mb-1"><input type="radio" name="q16" value="有序·博爱"> 建立变异者登记制度</label>
+                <label class="block mb-1"><input type="radio" name="q16" value="有序·竞争"> 定制超级战士军团</label>
+                <label class="block mb-1"><input type="radio" name="q16" value="自由·竞争"> 制造变异病毒勒索世界</label>
+                <label class="block mb-1"><input type="radio" name="q16" value="自由·博爱"> 免费修复先天性残疾</label>
+            </div>
+            <div class="mb-6">
+                <h2 class="text-xl font-bold mb-2">终极抉择篇</h2>
+                <p class="mb-2">17、尸潮即将淹没最后避难所</p>
+                <label class="block mb-1"><input type="radio" name="q17" value="有序·博爱"> 按抽签顺序分批撤离</label>
+                <label class="block mb-1"><input type="radio" name="q17" value="有序·竞争"> 优先转移精英科学家</label>
+                <label class="block mb-1"><input type="radio" name="q17" value="自由·竞争"> 引爆核弹同归于尽</label>
+                <label class="block mb-1"><input type="radio" name="q17" value="自由·博爱"> 独自引开尸群争取时间</label>
+            </div>
+            <div class="mb-6">
+                <p class="mb-2">18、发现自己是病毒免疫体</p>
+                <label class="block mb-1"><input type="radio" name="q18" value="有序·博爱"> 配合系统化抗体提取</label>
+                <label class="block mb-1"><input type="radio" name="q18" value="有序·竞争"> 控制疫苗生产定价权</label>
+                <label class="block mb-1"><input type="radio" name="q18" value="自由·竞争"> 高价出售每一滴血液</label>
+                <label class="block mb-1"><input type="radio" name="q18" value="自由·博爱"> 主动感染人群传播抗体</label>
+            </div>
+            <div class="mb-6">
+                <p class="mb-2">19、获得重启文明的时间机器</p>
+                <label class="block mb-1"><input type="radio" name="q19" value="有序·博爱"> 修正关键历史节点</label>
+                <label class="block mb-1"><input type="radio" name="q19" value="有序·竞争"> 确保自己家族永世掌权</label>
+                <label class="block mb-1"><input type="radio" name="q19" value="自由·竞争"> 创造多重混乱时间线</label>
+                <label class="block mb-1"><input type="radio" name="q19" value="自由·博爱"> 锁定病毒爆发前三天</label>
+            </div>
+            <div class="mb-6">
+                <p class="mb-2">20、面对外星种族招降条件</p>
+                <label class="block mb-1"><input type="radio" name="q20" value="有序·博爱"> 签署《跨物种和平协议》</label>
+                <label class="block mb-1"><input type="radio" name="q20" value="有序·竞争"> 出卖地球换取贵族身份</label>
+                <label class="block mb-1"><input type="radio" name="q20" value="自由·竞争"> 伪装投降伺机反杀</label>
+                <label class="block mb-1"><input type="radio" name="q20" value="自由·博爱"> 向全宇宙广播地球文明</label>
+            </div>
+            <div class="mb-6">
+                <h2 class="text-xl font-bold mb-2">自我觉醒篇</h2>
+                <p class="mb-2">21、身体开始不可逆丧尸化</p>
+                <label class="block mb-1"><input type="radio" name="q21" value="有序·博爱"> 制定《变异者生存指南》</label>
+                <label class="block mb-1"><input type="radio" name="q21" value="有序·竞争"> 吞噬同类延缓变异速度</label>
+                <label class="block mb-1"><input type="radio" name="q21" value="自由·竞争"> 伪装人类混入高层</label>
+                <label class="block mb-1"><input type="radio" name="q21" value="自由·博爱"> 走向尸群寻找进化可能</label>
+            </div>
+            <div class="mb-6">
+                <p class="mb-2">22、发现旧日恋人已成尸王</p>
+                <label class="block mb-1"><input type="radio" name="q22" value="有序·博爱"> 尝试唤醒其人类意识</label>
+                <label class="block mb-1"><input type="radio" name="q22" value="有序·竞争"> 利用情感弱点控制尸群</label>
+                <label class="block mb-1"><input type="radio" name="q22" value="自由·竞争"> 提取其基因制造武器</label>
+                <label class="block mb-1"><input type="radio" name="q22" value="自由·博爱"> 自愿感染陪伴其永生</label>
+            </div>
+            <div class="mb-6">
+                <p class="mb-2">23、掌握天气控制权杖</p>
+                <label class="block mb-1"><input type="radio" name="q23" value="有序·博爱"> 恢复全球生态平衡</label>
+                <label class="block mb-1"><input type="radio" name="q23" value="有序·竞争"> 制造天灾清除反对者</label>
+                <label class="block mb-1"><input type="radio" name="q23" value="自由·竞争"> 随机降下陨石雨取乐</label>
+                <label class="block mb-1"><input type="radio" name="q23" value="自由·博爱"> 在沙漠创造鲜花绿洲</label>
+            </div>
+            <div class="mb-6">
+                <p class="mb-2">24、最终进化方向选择</p>
+                <label class="block mb-1"><input type="radio" name="q24" value="有序·博爱"> 建立《新人类宪章》</label>
+                <label class="block mb-1"><input type="radio" name="q24" value="有序·竞争"> 成为基因垄断者</label>
+                <label class="block mb-1"><input type="radio" name="q24" value="自由·竞争"> 化身混沌破坏神</label>
+                <label class="block mb-1"><input type="radio" name="q24" value="自由·博爱"> 散作亿万星光粒子</label>
+            </div>
+            <button type="button" class="bg-blue-500 text-white py-2 px-4 rounded" onclick="submitTest()">提交测试</button>
+        </form>
+    </div>
+
+    <script>
+        function submitTest() {
+            const form = document.getElementById('testForm');
+            const formData = new FormData(form);
+            let scores = {
+                '有序·博爱': 0,
+                '有序·竞争': 0,
+                '自由·竞争': 0,
+                '自由·博爱': 0
+            };
+
+            for (let [key, value] of formData.entries()) {
+                scores[value]++;
+            }
+
+            let result = '';
+            let maxScore = Math.max(scores['有序·博爱'], scores['有序·竞争'], scores['自由·竞争'], scores['自由·博爱']);
+            if (maxScore === scores['有序·博爱']) {
+                result = `
+                    <h2 class="text-2xl font-bold mb-2">系统改良人</h2>
+                    <div class="neutrality_univeralLove"></div>
+                    <p><strong>价值观倾向：中立 - 博爱</strong></p>
+                    <p>不存在电车难题</p>
+                    <p>性格特点：通过规则和制度实现共同发展，认为系统性改革才能最大化集体福祉。</p>
+                    <p>职业形象：公益组织管理者、公立医院院长、法官</p>
+                    <p>内驱力：建立公正的社会秩序，确保资源合理分配。</p>
+                    <p>幸福观：社会和谐运转，每个人在规则内获得应有的帮助。</p>
+                    <p>常见情绪：责任感、正义感、对“低效善行”的焦虑。</p>
+                    <p>代表人物：马丁·路德·金（通过制度变革推动平等）、范仲淹（北宋政治家，倡导“先天下之忧而忧，后天下之乐而乐”）</p>
+                `;
+            } else if (maxScore === scores['有序·竞争']) {
+                result = `
+                    <h2 class="text-2xl font-bold mb-2">精致利己者</h2>
+                    <div class="neutrality_competition"></div>
+                    <p><strong>价值观倾向：中立 - 竞争</strong></p>
+                    <p>胜利就是正义</p>
+                    <p>性格特点：在规则内最大化个人或企业利益，积极推动制度改革。</p>
+                    <p>职业形象：企业家、律师、金融分析师、政客</p>
+                    <p>内驱力：在体系内成为赢家，推动社会效率。</p>
+                    <p>幸福观：成为体系内的顶尖者，且他人承认其合法性。</p>
+                    <p>常见情绪：算计的冷静、对“破坏规则者”的轻蔑。</p>
+                    <p>代表人物：吕不韦（战国商人，权谋与商业结合）、马云（阿里巴巴创始人，商业规则博弈）</p>
+                `;
+            } else if (maxScore === scores['自由·竞争']) {
+                result = `
+                    <h2 class="text-2xl font-bold mb-2">破局逐鹿人</h2>
+                    <div class="freedom_competition"></div>
+                    <p><strong>价值观倾向：自由 - 竞争</strong></p>
+                    <p>世界就是游乐场</p>
+                    <p>性格特点：无约束地击败一切阻碍，享受竞争的纯粹快感。</p>
+                    <p>职业形象：创业冒险家、自由投资人、加密货币交易者。</p>
+                    <p>内驱力：彻底的自由与力量，他人无法限制其行动。</p>
+                    <p>幸福观：成为无可争议的强者，规则由自己制定。</p>
+                    <p>常见情绪：亢奋、对规则的蔑视、获胜后的无聊。</p>
+                    <p>代表人物：沈万三（元末明初巨富，商业冒险家）、哥伦布（冒险开拓者）</p>
+                `;
+            } else {
+                result = `
+                    <h2 class="text-2xl font-bold mb-2">进步倡议人</h2>
+                    <div class="freedom_univeralLove"></div>
+                    <p><strong>价值观倾向：自由 - 博爱</strong></p>
+                    <p>从来如此，便是对吗？</p>
+                    <p>性格特点：崇尚自由与正义，厌恶僵化制度，认为直接干预比缓慢改革更有效。</p>
+                    <p>职业形象：独立记者、公益律师、环保活动家、社会运动领袖。</p>
+                    <p>内驱力：解放受压迫者，挑战不合理的权威。</p>
+                    <p>幸福观：个体能自由行善，不受官僚主义束缚。</p>
+                    <p>常见情绪：激情、对不公的愤怒、对缓慢改革的急躁。</p>
+                    <p>代表人物：切·格瓦拉（革命理想主义）、黄宗羲（明末思想家，批判专制，主张民权）</p>
+                `;
+            }
+
+            const resultDiv = document.createElement('div');
+            resultDiv.innerHTML = `
+                <h1 class="text-3xl font-bold mb-6 text-center">人生角色卡</h1>
+                ${result}
+            `;
+            form.replaceWith(resultDiv);
+        }
+    </script>
+</body>
+<style>
+</style>
+</html>
+    
